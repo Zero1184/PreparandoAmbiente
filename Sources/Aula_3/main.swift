@@ -2,6 +2,8 @@ import Foundation
 
 print("Aula 3 de Swift!!")
 
+
+// Exercícios em classe
 // EX01 
 
 print("Digite a temperatura em Celsius: ")
@@ -66,3 +68,44 @@ guard let base = base, let alt = alt, let base = Double(base), let alt = Double(
 let area = base * alt
 
 print("Área: ",String(format:"%.2f",area))
+
+// Exercícios para fazer em casa
+// EX01
+
+print("Digite o cateto:")
+let lado1 : String? = readLine()
+ 
+print("Digite o outro cateto")
+let lado2 : String? = readLine()
+
+guard let lado1 = lado1, let lado2 = lado2, let lado1 = Double(lado1), let lado2 = Double(lado2) else{
+    exit(-1)
+}
+
+let hipo = sqrt(pow(lado1, 2) + pow(lado2, 2))
+
+print(hipo)
+
+// EX02
+
+print("Digite a:")
+let a : String? = readLine()
+
+print("Digite b:")
+let b : String? = readLine()
+
+print("Digite c:")
+let c : String? = readLine()
+
+guard let a = a, let b = b, let c = c, let a = Double(a), let b = Double(b), let c = Double(c) else{
+    exit(-1)
+}
+
+let delta = sqrt(pow(b, 2) - 4 * a * c)
+
+let r1 = (-b + delta) / 2 * a
+let r2 = (-b - delta) / 2 * a
+
+print("Raizes: ", r1," e ", r2)
+
+
